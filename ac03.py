@@ -10,7 +10,7 @@ class Professor (Pessoa):
         self.disciplinas = []
          
     def incluir_disciplina(self, disciplina):
-        self.disciplina.append(disciplina)
+        self.disciplinas.append(disciplina)
         
 
 class Aluno (Pessoa):
