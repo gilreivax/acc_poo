@@ -20,9 +20,10 @@ class Aluno (Pessoa):
         self.casa = None
         self.__triunfos = 0
         self.__mau_feitos = 0
+        self.disciplinas = []
         
     def incluir_disciplina(self, disciplina):
-        self.disciplina.append(disciplina)
+        self.disciplinas.append(disciplina)
     
     def incluir_quantidade(self, quantidade):
         self.quantidade += quantidade
@@ -35,6 +36,9 @@ class Aluno (Pessoa):
     
     def get_mau_feitos(self):
         return self.__mau_feitos
+    
+    def set_casa (self, Casa):
+        self.Casa = Casa
     
 
 class Disciplina :
