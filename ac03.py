@@ -37,24 +37,30 @@ class Aluno (Pessoa):
         return self.__mau_feitos
     
 
-class Disciplina (Professor):
-    def __init__(self, nome, nascimento, ementa):
-        super().__init__(nome, nascimento)
+class Disciplina :
+    def __init__(self, nome,  ementa):
+        self.nome = nome
         self.ementa = ementa 
     
     
-class Casa (Aluno):
-    def __init__(self, nome, nascimento, tipo, animal):
-        super().__init__(nome, nascimento, tipo)
+class Casa:
+    def __init__(self, nome, animal):
+        self.nome = nome
         self.animal = animal 
         self.__diretor = None
         self.__monitor = None
     
+    def get_diretor(self):
+        return self.__diretor
+    
+    def get_monitor(self):
+        return self.__monitor
+    
     def set_diretor (self, diretor):
-        self__diretor = diretor
+        self.__diretor = diretor
         
     def set_monitor (self, monitor):
-        self__monitor = monitor
+        self.__monitor = monitor
     
 
 class Escola:
@@ -75,7 +81,7 @@ class Torneio(Casa):
     
     def marcar_ponto(self, casa, quantidade):
         self.casa = casa
-        self.quantidade = quantidade
+        self.quantidade += quantidade
     
     def get_pontos_casa1 (self):
         return self.__pontos_casa1
