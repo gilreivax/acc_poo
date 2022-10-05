@@ -25,11 +25,11 @@ class Aluno (Pessoa):
     def incluir_disciplina(self, disciplina):
         self.disciplinas.append(disciplina)
     
-    def incluir_quantidade(self, quantidade):
-        self.quantidade += quantidade
+    def incluir_triunfo(self, quantidade):
+        self.__triunfos += quantidade
     
     def incluir_mau_feito(self, quantidade):
-        self.quantidade += quantidade
+        self.__mau_feitos += quantidade
     
     def get_triunfos (self):
         return self.__triunfos
@@ -38,7 +38,7 @@ class Aluno (Pessoa):
         return self.__mau_feitos
     
     def set_casa (self, Casa):
-        self.Casa = Casa
+        self.casa = Casa
     
 
 class Disciplina :
@@ -60,11 +60,11 @@ class Casa:
     def get_monitor(self):
         return self.__monitor
     
-    def set_diretor (self, Professor):
-        self.__diretor = Professor
+    def set_diretor (self, diretor):
+        self.__diretor = diretor
         
-    def set_monitor (self, Aluno):
-        self.__monitor = Aluno
+    def set_monitor (self, monitor):
+        self.__monitor = monitor
     
 
 class Escola:
@@ -84,11 +84,17 @@ class Torneio(Casa):
         self.__pontos_casa2 = 0
     
     def marcar_ponto(self, casa, quantidade):
-        self.casa = casa
-        self.quantidade += quantidade
-    
+        if casa == self.casa1:
+ 
+            self.__pontos_casa1 += quantidade
+        else:
+   
+            self.__pontos_casa2 += quantidade
+            
+        
+        
     def get_pontos_casa1 (self):
         return self.__pontos_casa1
     
     def get_pontos_casa1 (self):
-        return self.__pontos_casa2
+        return self.__pontos_casa2    
