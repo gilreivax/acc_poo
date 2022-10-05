@@ -76,7 +76,7 @@ class Escola:
         self.casas.append(casa)
         
 
-class Torneio(Casa):
+class Torneio:
     def __init__(self, casa1, casa2):
         self.casa1 = casa1
         self.casa2 = casa2 
@@ -96,5 +96,5 @@ class Torneio(Casa):
     def get_pontos_casa1 (self):
         return self.__pontos_casa1
     
-    def get_pontos_casa1 (self):
+    def get_pontos_casa2 (self):
         return self.__pontos_casa2    
