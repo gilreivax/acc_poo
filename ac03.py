@@ -60,11 +60,11 @@ class Casa:
     def get_monitor(self):
         return self.__monitor
     
-    def set_diretor (self, diretor):
-        self.__diretor = diretor
+    def set_diretor (self, Professor):
+        self.__diretor = Professor
         
-    def set_monitor (self, monitor):
-        self.__monitor = monitor
+    def set_monitor (self, Aluno):
+        self.__monitor = Aluno
     
 
 class Escola:
